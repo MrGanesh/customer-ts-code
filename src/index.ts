@@ -15,14 +15,15 @@ document.getElementById('btnSubmit').addEventListener("click", () => {
     aid = parseInt((<HTMLInputElement><unknown>document.getElementById("aid")).value);
     balance = parseInt((<HTMLInputElement><unknown>document.getElementById("balance")).value);
 
-    account1 = new Account(cid, cname, cdisc, id, amount, aid, balance)
+    account1 = new Account(cid, cname, cdisc, id, amount, aid, balance);
 
-    console.log('Account ID ' + account1.getId())
-    console.log('Customer ID ' + account1.getCid())
-    console.log('Customer Details ' + account1.getCustomer())
-    console.log('Balance ' + account1.getBalance())
-    console.log('to string data ' + account1.toString())
-    console.log('Customer Name ' + account1.getCustomerName())
+    (<HTMLParagraphElement>document.querySelector('#custName')).innerHTML =  "Customer Name : "+account1.getCustomerName();
+    (<HTMLParagraphElement>document.querySelector('#accountId')).innerHTML = 'Account ID : ' + account1.getId();
+    (<HTMLParagraphElement>document.querySelector('#custId')).innerHTML = 'Customer ID : ' + account1.getCid();
+    (<HTMLParagraphElement>document.querySelector('#custDetails')).innerHTML ='Customer Details : ' + account1.getCustomer();  
+    (<HTMLParagraphElement>document.querySelector('#balDetails')).innerHTML = 'Balance : ' + account1.getBalance();
+    (<HTMLParagraphElement>document.querySelector('#custId')).innerHTML = 'Customer ID : ' + account1.getCid();
+    (<HTMLParagraphElement>document.querySelector('#toString')).innerHTML ='To string data : ' + account1.toString();  
 })
 
 document.getElementById('btnDeposit').addEventListener("click",() =>{

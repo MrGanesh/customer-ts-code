@@ -10,67 +10,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <style>
+        p{
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-4 col-12">
+            <div class="col-sm-6 offset-sm-3 col-12">
+                <h1 class="ml-2">Customer Details</h1>
                 <div class="form-group">
                     <label for="cid">Customer Id:</label>
-                    <input type="text" id="cid" class="form-control" placeholder="Enter Customer ID">
+                    <input type="text" required id="cid" class="form-control" placeholder="Enter Customer ID">
                 </div>
                 <div class="form-group">
                     <label for="cname">Customer Name:</label>
-                    <input type="text" id="cname" class="form-control" placeholder="Enter Customer Name">
+                    <input type="text" required id="cname" class="form-control" placeholder="Enter Customer Name">
                 </div>
                 <div class="form-group">
                     <label for="cdisc">Disount (In Percent):</label>
-                    <input type="text" id="cdisc" class="form-control" placeholder="Enter Customer ID">
+                    <input type="text" required id="cdisc" class="form-control" placeholder="Enter Customer ID">
                 </div>
             </div>
 
-            <div class="col-sm-6 offset-sm-4 col-12">
+            <div class="col-sm-6 offset-sm-3 col-12">
                 <div class="form-group">
                     <label for="id">Invoice Id:</label>
-                    <input type="text" id="id" class="form-control" placeholder="Enter Invoice ID">
+                    <input type="text" required id="id" class="form-control" placeholder="Enter Invoice ID">
                 </div>
                 <div class="form-group">
                     <label for="amount">Amount:</label>
-                    <input type="text" id="amount" class="form-control" placeholder="Enter Amount">
+                    <input type="text" required id="amount" class="form-control" placeholder="Enter Amount">
                 </div>
             </div>
 
-            <div class="col-sm-6 offset-sm-4 col-12">
+            <div class="col-sm-6 offset-sm-3 col-12">
                 <div class="form-group">
                     <label for="aid">Account Id:</label>
-                    <input type="text" id="aid" class="form-control" placeholder="Enter Account ID">
+                    <input type="text" required id="aid" class="form-control" placeholder="Enter Account ID">
                 </div>
                 <div class="form-group">
                     <label for="balance">Balance:</label>
-                    <input type="text" id="balance" class="form-control" placeholder="Enter Amount">
+                    <input type="text" required id="balance" class="form-control" placeholder="Enter Amount">
                 </div>
             </div>
-            <div class="col-sm-6 offset-sm-4 col-12">
-                <button type="submit" id="btnSubmit"  class="btn-block btn-info">Submit</button>
+            <div class="col-sm-6 offset-sm-3 col-12">
+                <button type="submit" id="btnSubmit"  class="btn-block btn-info mb-2">Submit</button>
+                <p id="custName"></p>
+                <p id="accountId"></p>
+                <p id="custId"></p>
+                <p id="custDetails"></p>
+                <p id="balDetails"></p>
+                <p id="toString"></p>
             </div>
             <hr />
-            <div id="after-deposit" class="col-sm-6 offset-sm-4 col-12 border-bottom">
+            <div id="after-deposit" class="col-sm-6 offset-sm-3 col-12 border-bottom">
                 <div class="form-group">
                     <label for="depositAmount">Enter amount to deposit:</label>
                     <input type="text" id="depositAmount" class="form-control" placeholder="Enter amount to deposit">
-                    <button type="submit" id="btnDeposit"  class="btn-block btn-info">Deposit</button>
+                    <button type="submit" id="btnDeposit"  class="btn-block btn-info mb-2">Deposit</button>
                     <label for="finalDepAmount">Final Balance:</label>
                     <input type="text" id="finalDepAmount" class="form-control" placeholder="Enter amount to deposit">
                 </div>
             </div>
             <hr />
-            <div id="after-withdraw" class="col-sm-6 offset-sm-4 col-12">
+            <div id="after-withdraw" class="col-sm-6 offset-sm-3 col-12">
                 <div class="form-group">
                     <label for="withdrawAmount">Enter amount to withdraw:</label>
                     <input type="text" id="withdrawAmount" class="form-control" placeholder="Enter amount to withdraw">
-                    <button type="submit" id="btnWithdraw" class="btn-block btn-info">Withdraw</button>
+                    <button type="submit" id="btnWithdraw" class="btn-block btn-info mb-2">Withdraw</button>
 
                     <label for="finalWithAmount">Final Balance:</label>
                     <input type="text" id="finalWithAmount" class="form-control" placeholder="Final Balance:">
